@@ -1,0 +1,72 @@
+<!-- PAGE BANNER -->
+<section class="banner">
+  <div class="container banner-inner">
+    <span class="eyebrow">Our Services</span>
+    <h1>Dental care for <span class="accent">every smile</span></h1>
+    <p class="lead">
+      From routine check-ups to restorative and cosmetic treatment, we offer
+      comfortable, personalised care for the whole family.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      @for (s of services; track s.title) {
+        <article class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path [attr.d]="s.icon" /></svg>
+          </div>
+          <h2>{{ s.title }}</h2>
+          <p>{{ s.text }}</p>
+          <a
+            class="card-link"
+            routerLink="/request-booking"
+            [queryParams]="{ service: s.title }"
+          >
+            Book this service
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14 M13 6l6 6-6 6" /></svg>
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ASSURANCES -->
+<section class="section tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our promise</span>
+      <h2>Every visit, done right</h2>
+    </div>
+
+    <div class="assure-grid">
+      @for (a of assurances; track a.title) {
+        <div class="assure">
+          <span class="tick">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+          </span>
+          <div>
+            <h3>{{ a.title }}</h3>
+            <p>{{ a.text }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Ready to book your visit?</h2>
+    <p>Request your appointment today and we will take it from there.</p>
+    <div class="cta-actions">
+      <a class="btn btn-light" routerLink="/request-booking">Request Booking</a>
+      <a class="btn btn-ghost" routerLink="/contact">Contact Us</a>
+    </div>
+  </div>
+</section>

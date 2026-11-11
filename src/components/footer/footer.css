@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+/* Footer styling */
+footer {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+/* Section headings */
+footer h2 {
+  color: #2e7d32;
+}
+
+/* Decorative lines */
+footer section > div {
+  background-color: #fdfffe;
+}
+
+/* Footer links */
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0e5c35;
+}
+
+/* Contact details */
+footer section p {
+  line-height: 1.8;
+}
+
+/* Copyright section */
+footer .border-t {
+  border-color: #d1e5d3;
+}

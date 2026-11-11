@@ -1,0 +1,409 @@
+:host {
+  --green-900: #064e3b;
+  --green-700: #047857;
+  --green-600: #059669;
+  --green-500: #10b981;
+  --green-100: #d1fae5;
+  --green-50: #ecfdf5;
+  --text: #1f2937;
+  --muted: #5b6770;
+  --border: #e5e7eb;
+  --danger: #dc2626;
+  --white: #ffffff;
+
+  display: block;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--green-900);
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 40px 0 72px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 26px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--green-500);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: var(--green-600);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.28);
+}
+
+.btn-primary:hover {
+  background: var(--green-700);
+}
+
+.btn-outline {
+  background: var(--white);
+  color: var(--green-700);
+  border-color: var(--green-600);
+}
+
+.btn-outline:hover {
+  background: var(--green-50);
+}
+
+/* ---------- Banner ---------- */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  background: var(--green-50);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.accent {
+  color: var(--green-600);
+}
+
+.banner {
+  padding: 56px 0 40px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--green-50) 0%, var(--white) 100%);
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 6.5vw, 3.3rem);
+  margin-bottom: 16px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- Layout ---------- */
+.booking-grid {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+
+.form-card,
+.preview-card,
+.steps-card {
+  background: var(--white);
+  border: 1px solid var(--green-100);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(5, 150, 105, 0.08);
+}
+
+.form-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* ---------- Form fields ---------- */
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 18px;
+  border: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.field label,
+.field legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green-900);
+  padding: 0;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='date'],
+select,
+textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem; /* 16px stops iOS zooming in on focus */
+  color: var(--text);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--green-500);
+  box-shadow: 0 0 0 4px var(--green-100);
+}
+
+input[aria-invalid='true'],
+select[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.82rem;
+}
+
+.row {
+  display: grid;
+  gap: 0;
+}
+
+/* radio choices */
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.choice {
+  position: relative;
+  flex: 1 1 140px;
+  cursor: pointer;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+
+.choice span {
+  display: block;
+  text-align: center;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.choice input:checked + span {
+  background: var(--green-50);
+  border-color: var(--green-600);
+  color: var(--green-700);
+}
+
+.choice input:focus-visible + span {
+  box-shadow: 0 0 0 4px var(--green-100);
+}
+
+.privacy {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ---------- Preview ---------- */
+.side {
+  display: grid;
+  gap: 24px;
+}
+
+.preview-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.preview-head svg {
+  width: 24px;
+  height: 24px;
+  color: var(--green-600);
+}
+
+.preview-head h3 {
+  font-size: 1.15rem;
+}
+
+.chat {
+  background: var(--green-50);
+  border-radius: 16px;
+  padding: 18px 14px;
+}
+
+.bubble {
+  background: var(--green-100);
+  color: var(--green-900);
+  padding: 12px 14px;
+  border-radius: 14px 14px 4px 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.preview-note {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.steps-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.steps-card ol {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+/* ---------- Success ---------- */
+.success {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--green-600);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.success-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke-width: 3;
+}
+
+.success p {
+  color: var(--muted);
+  max-width: 420px;
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 640px) {
+  .form-card,
+  .preview-card,
+  .steps-card {
+    padding: 32px;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 960px) {
+  .banner {
+    padding: 80px 0 48px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 32px;
+  }
+
+  .side {
+    position: sticky;
+    top: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

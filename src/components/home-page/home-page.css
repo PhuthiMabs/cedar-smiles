@@ -1,0 +1,733 @@
+:host {
+  --green-900: #064e3b;
+  --green-700: #047857;
+  --green-600: #059669;
+  --green-500: #10b981;
+  --green-100: #d1fae5;
+  --green-50: #ecfdf5;
+  --text: #1f2937;
+  --muted: #5b6770;
+  --border: #e5e7eb;
+  --white: #ffffff;
+
+  display: block;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--green-900);
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 36px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible,
+.fab:focus-visible {
+  outline: 3px solid var(--green-500);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: var(--green-600);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.28);
+}
+
+.btn-primary:hover {
+  background: var(--green-700);
+}
+
+.btn-outline {
+  background: var(--white);
+  color: var(--green-700);
+  border-color: var(--green-600);
+}
+
+.btn-outline:hover {
+  background: var(--green-50);
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--green-700);
+}
+
+/* ---------- Shared text bits ---------- */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  background: var(--green-50);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.accent {
+  color: var(--green-600);
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.tint {
+  background: var(--green-50);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 44px;
+}
+
+.section-head h2,
+.split-text h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 48px 0 56px;
+  background: linear-gradient(180deg, var(--green-50) 0%, var(--white) 100%);
+}
+
+.hero-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  margin-bottom: 18px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+}
+
+.blob {
+  width: min(78vw, 340px);
+  aspect-ratio: 1;
+  border-radius: 42% 58% 55% 45% / 48% 42% 58% 52%;
+  background: linear-gradient(135deg, var(--green-500), var(--green-700));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 24px 50px rgba(4, 120, 87, 0.3);
+}
+
+.tooth {
+  width: 56%;
+  fill: var(--white);
+  stroke: none;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.15));
+}
+
+.chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  color: var(--green-900);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.chip .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green-500);
+}
+
+.chip-top {
+  top: 8%;
+  left: 2%;
+}
+
+.chip-bottom {
+  bottom: 8%;
+  right: 2%;
+}
+
+/* ---------- Trust strip ---------- */
+.trust {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+
+.trust-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--green-900);
+}
+
+.trust-item svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: var(--green-700);
+}
+
+/* ---------- Service cards ---------- */
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-100);
+  box-shadow: 0 16px 32px rgba(5, 150, 105, 0.12);
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--green-50);
+  color: var(--green-600);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Split (why choose us) ---------- */
+.split {
+  display: grid;
+  gap: 36px;
+  align-items: center;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.feature-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--green-600);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.tick svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 3;
+}
+
+.feature-list h3 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.feature-list p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.panel {
+  background: linear-gradient(135deg, var(--green-600), var(--green-900));
+  color: var(--white);
+  border-radius: 28px;
+  padding: 44px 28px;
+  text-align: center;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  box-shadow: 0 24px 50px rgba(4, 120, 87, 0.25);
+}
+
+.tooth.small {
+  width: 90px;
+}
+
+.panel p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: 260px;
+}
+
+/* ---------- Steps ---------- */
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--green-600);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Info cards ---------- */
+.info-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.info-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid var(--green-100);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.info-card p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.95rem;
+}
+
+.hours li:last-child {
+  border-bottom: none;
+}
+
+.hours strong {
+  color: var(--green-700);
+  text-align: right;
+}
+
+/* ---------- Closing CTA ---------- */
+.cta {
+  background: linear-gradient(135deg, var(--green-600), var(--green-900));
+  color: var(--white);
+  padding: 64px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--white);
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  margin-bottom: 12px;
+}
+
+.cta p {
+  opacity: 0.9;
+  margin-bottom: 26px;
+}
+
+/* ---------- Floating button (mobile only) ---------- */
+.fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-600);
+  color: var(--white);
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(4, 120, 87, 0.4);
+}
+
+.fab svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 640px) {
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .card-grid,
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 960px) {
+  .section {
+    padding: 88px 0;
+  }
+
+  .hero {
+    padding: 80px 0 90px;
+  }
+
+  .hero-grid,
+  .split {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+  }
+
+  .card-grid,
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fab {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* ---------- Meet Your Dentist ---------- */
+.dentist {
+  background: var(--white);
+}
+
+.dentist-grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.dentist-photo {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* green offset frame behind the photo */
+.dentist-photo::before {
+  content: '';
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border-radius: 28px;
+  background: var(--green-100);
+  z-index: 0;
+}
+
+
+
+.dentist-text h2 {
+  font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+  margin-bottom: 18px;
+}
+
+.qualifications {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.qualifications li {
+  background: var(--green-50);
+  color: var(--green-700);
+  border: 1px solid var(--green-100);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.bio {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.dentist-text .btn {
+  margin-top: 10px;
+}
+
+@media (min-width: 960px) {
+  .dentist-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 64px;
+  }
+}
+
+/* ---------- Dentist slideshow ---------- */
+.slideshow {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--green-50);
+  box-shadow: 0 20px 44px rgba(4, 120, 87, 0.2);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green-700);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease;
+}
+
+.slide-btn:hover {
+  background: var(--white);
+}
+
+.slide-btn:focus-visible,
+.dot-btn:focus-visible {
+  outline: 3px solid var(--green-500);
+  outline-offset: 2px;
+}
+
+.slide-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot-btn {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.dot-btn.active {
+  width: 26px;
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.dentist-photo .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  box-shadow: none;
+}

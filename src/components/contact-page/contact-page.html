@@ -1,0 +1,94 @@
+<!-- PAGE BANNER -->
+<section class="banner">
+  <div class="container banner-inner">
+    <span class="eyebrow">Contact Us</span>
+    <h1>Get in touch with <span class="accent">Cedar Smiles</span></h1>
+    <p class="lead">
+      Have a question or ready to book? Reach out in whichever way suits you
+      best and we will be happy to help.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT METHODS -->
+<section class="section">
+  <div class="container">
+    <div class="method-grid">
+      @for (m of methods; track m.label) {
+        <a
+          class="method"
+          [href]="m.href"
+          [attr.target]="m.external ? '_blank' : null"
+          [attr.rel]="m.external ? 'noopener noreferrer' : null"
+        >
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path [attr.d]="m.icon" /></svg>
+          </div>
+          <h3>{{ m.label }}</h3>
+          <p>{{ m.value }}</p>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section class="section tint">
+  <div class="container info-grid">
+    <div class="info-card">
+      <div class="card-title">
+        <div class="icon-box small">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M12 6v6l4 2" />
+          </svg>
+        </div>
+        <h2>Opening hours</h2>
+      </div>
+
+      <ul class="hours">
+        @for (h of hours; track h.day) {
+          <li>
+            <span>{{ h.day }}</span>
+            <strong>{{ h.time }}</strong>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">
+        <div class="icon-box small">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+          </svg>
+        </div>
+        <h2>Our location</h2>
+      </div>
+
+      <address class="address">
+        @for (line of practice.address; track line) {
+          <span>{{ line }}</span>
+        }
+      </address>
+
+      <div class="map-placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+        </svg>
+      </div>
+
+      <a class="btn btn-primary" [href]="mapsUrl" target="_blank" rel="noopener noreferrer">
+        Get directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Prefer to book online?</h2>
+    <p>Fill in a short form and we will continue the conversation on WhatsApp.</p>
+    <a class="btn btn-light" routerLink="/request-booking">Request Booking</a>
+  </div>
+</section>

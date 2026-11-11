@@ -1,0 +1,239 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Cedar Smiles Dental Clinic </span>
+      <h1>A Healthier Smile  <span class="accent">Begins Here.</span></h1>
+      <p class="lead">
+        Welcome to Cedar Smiles Dental Clinic, where exceptional care meets comfort, compassion,
+        and personalised attention.
+      </p>
+
+      <p class="lead">
+        We are committed to helping you achieve and maintain a healthy, confident smile
+        through quality dental care in a welcoming environment.
+
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" routerLink="/request-booking" routerLinkActive="active">Request Booking</a>
+        <a class="btn btn-outline" routerLink="/services" routerLinkActive="active">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="blob">
+        <svg viewBox="0 0 24 24" class="tooth">
+          <path
+            d="M7.5 3C5 3 3.5 5 3.5 7.5c0 2 .7 3.3 1.2 5.2.6 2.3.9 5.3 1.9 7.3.5 1 1.5 1.3 2 .2.7-1.6.9-4.2 1.7-5.3.3-.4.6-.6.9-.6s.6.2.9.6c.8 1.1 1 3.7 1.7 5.3.5 1.1 1.5.8 2-.2 1-2 1.3-5 1.9-7.3.5-1.9 1.2-3.2 1.2-5.2C20.5 5 19 3 16.5 3c-1.7 0-2.8.8-4.5.8S9.2 3 7.5 3z"
+          />
+        </svg>
+      </div>
+      <div class="chip chip-top"><span class="dot"></span> Gentle care</div>
+      <div class="chip chip-bottom"><span class="dot"></span> Book via WhatsApp  </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust">
+  <div class="container trust-list">
+    @for (item of highlights; track item) {
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+        <span>{{ item }}</span>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Dental care for every smile</h2>
+      <p>From routine check-ups to cosmetic treatments, we have you covered.</p>
+    </div>
+
+    <div class="card-grid">
+      @for (s of services; track s.title) {
+        <article class="card">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path [attr.d]="s.icon" /></svg>
+          </div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+        </article>
+      }
+    </div>
+
+    <div class="center">
+      <a class="btn btn-outline" routerLink="/services">View all services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section tint">
+  <div class="container split">
+    <div class="split-text">
+      <span class="eyebrow">Why Cedar Smiles Dental Clinic</span>
+      <h2>A dental practice that feels welcoming</h2>
+      <ul class="feature-list">
+        @for (f of features; track f.title) {
+          <li>
+            <span class="tick">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg>
+            </span>
+            <div>
+              <h3>{{ f.title }}</h3>
+              <p>{{ f.text }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+      <a class="btn btn-primary" routerLink="/about">Learn more about us</a>
+    </div>
+
+    <div class="split-visual" aria-hidden="true">
+      <div class="panel">
+        <svg viewBox="0 0 24 24" class="tooth small">
+          <path
+            d="M7.5 3C5 3 3.5 5 3.5 7.5c0 2 .7 3.3 1.2 5.2.6 2.3.9 5.3 1.9 7.3.5 1 1.5 1.3 2 .2.7-1.6.9-4.2 1.7-5.3.3-.4.6-.6.9-.6s.6.2.9.6c.8 1.1 1 3.7 1.7 5.3.5 1.1 1.5.8 2-.2 1-2 1.3-5 1.9-7.3.5-1.9 1.2-3.2 1.2-5.2C20.5 5 19 3 16.5 3c-1.7 0-2.8.8-4.5.8S9.2 3 7.5 3z"
+          />
+        </svg>
+        <p>Your comfort comes first, at every visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET YOUR DENTIST -->
+<section class="section dentist">
+  <div class="container dentist-grid">
+
+
+    <div class="dentist-photo">
+  <div
+    class="slideshow"
+    (mouseenter)="stopAutoPlay()"
+    (mouseleave)="startAutoPlay()"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)"
+  >
+    @for (photo of photos; track photo.src; let i = $index) {
+      <img
+        class="slide"
+        [class.active]="i === current()"
+        [src]="photo.src"
+        [alt]="photo.alt"
+      />
+    }
+
+    <button class="slide-btn prev" type="button" aria-label="Previous photo" (click)="prev()">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+    </button>
+    <button class="slide-btn next" type="button" aria-label="Next photo" (click)="next()">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+    </button>
+
+    <div class="dots">
+      @for (photo of photos; track photo.src; let i = $index) {
+        <button
+          type="button"
+          class="dot-btn"
+          [class.active]="i === current()"
+          [attr.aria-label]="'Show photo ' + (i + 1)"
+          (click)="goTo(i)"
+        ></button>
+      }
+    </div>
+  </div>
+</div>
+
+    <div class="dentist-text">
+      <span class="eyebrow">Meet Your Dentist</span>
+      <h2>{{ dentist.name }}</h2>
+
+      <ul class="qualifications">
+        @for (q of dentist.qualifications; track q) {
+          <li>{{ q }}</li>
+        }
+      </ul>
+
+      @for (paragraph of dentist.bio; track paragraph) {
+        <p class="bio">{{ paragraph }}</p>
+      }
+
+      <a class="btn btn-primary" routerLink="/request-booking">Book an Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW BOOKING WORKS -->
+
+<!--
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Booking</span>
+      <h2>Book in three easy steps</h2>
+      <p>No accounts, no waiting on hold. Just a quick form and a WhatsApp message.</p>
+    </div>
+
+    <ol class="steps">
+      @for (step of steps; track step.title; let i = $index) {
+        <li class="step">
+          <span class="step-number">{{ i + 1 }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+-->
+
+<!-- HOURS & LOCATION -->
+<section class="section tint">
+  <div class="container info-grid">
+    <div class="info-card">
+      <h3>Opening hours</h3>
+      <ul class="hours">
+        @for (h of hours; track h.day) {
+          <li>
+            <span>{{ h.day }}</span>
+            <strong>{{ h.time }}</strong>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>Find us</h3>
+      <p>
+        Visit our Contact page for our address, directions and phone number, or
+        send us a message on WhatsApp.
+      </p>
+      <a class="btn btn-outline" routerLink="/contact">Contact details</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <h2>Ready for a healthier smile?</h2>
+    <p>Request your appointment today and we will take it from there.</p>
+    <a class="btn btn-light" routerLink="/request-booking">Request Booking</a>
+  </div>
+</section>
+
+<!-- Floating booking button (mobile only) -->
+<a class="fab" routerLink="/request-booking" aria-label="Request booking">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v18H3z M16 2v4 M8 2v4 M3 10h18" /></svg>
+  Book now
+</a>
