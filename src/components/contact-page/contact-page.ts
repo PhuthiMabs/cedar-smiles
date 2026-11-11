@@ -25,9 +25,9 @@ export class ContactPage {
   // TODO: replace every value below with the practice's real details
   practice = {
     phoneDisplay: '+27 00 000 0000',
-    phoneDigits: '27000000000', // no spaces or +, used for tel: and WhatsApp
+    phoneDigits: '27734729577', // no spaces or +, used for tel: and WhatsApp
     email: 'info@cedarsmiles.co.za',
-    address: ['Street address', 'Suburb, City', 'Postal code'],
+    address: ['1262 Embankment Road', 'Suite G04 Lougardia Building', 'Centurion', '0157'],
   };
 
   // TODO: replace with the practice's real operating hours

@@ -69,6 +69,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+           "options": {
+    "allowedHosts": [
+      "192.168.0.4"
+    ]
+  },
           "configurations": {
             "production": {
               "buildTarget": "cedar-smiles:build:production"

@@ -15,7 +15,7 @@ export interface BookingRequest {
 export class WhatsappService {
   // TODO: the practice's WhatsApp number in international format,
   // digits only: no "+", no spaces, no leading 0 (e.g. 27821234567)
-  private readonly practiceNumber = '27661109491';
+  private readonly practiceNumber = '27734729577';
 
   /** Builds the text that will be pre-filled in WhatsApp. */
   buildMessage(data: Partial<BookingRequest>): string {
