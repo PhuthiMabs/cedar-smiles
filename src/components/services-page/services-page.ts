@@ -29,8 +29,8 @@ export class ServicesPage {
       icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4',
     },
     {
-      title: 'Teeth Whitening',
-      text: 'Safe, effective whitening for a brighter, more confident smile.',
+      title: 'Threatre Care',
+      text: 'Comfortable, professional dental care focused on your oral health, ensuring a healthy smile and a positive experience.',
       icon: 'M12 3v2 M12 19v2 M3 12h2 M19 12h2 M5.6 5.6l1.4 1.4 M17 17l1.4 1.4 M5.6 18.4L7 17 M17 7l1.4-1.4 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',
     },
     {

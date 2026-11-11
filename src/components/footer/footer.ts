@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [],
   selector: 'app-footer',
   styleUrl: './footer.css',
   templateUrl: './footer.html',

@@ -1,11 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { WhatsappService } from '../../services/whatsapp.service';
 
 
 @Component({
-  imports: [ReactiveFormsModule,RouterLink],
+  imports: [ReactiveFormsModule],
   standalone: true,
   selector: 'app-request-booking',
   styleUrl: './request-booking.css',

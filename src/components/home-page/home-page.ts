@@ -48,7 +48,7 @@ export class HomePage {
     },
     {
       title: 'Theatre Care',
-      text: 'Safe, effective whitening for a brighter and more confident smile.',
+      text: 'Comfortable, professional dental care focused on your oral health, ensuring a healthy smile and a positive experience.',
       icon: 'M12 3v2 M12 19v2 M3 12h2 M19 12h2 M5.6 5.6l1.4 1.4 M17 17l1.4 1.4 M5.6 18.4L7 17 M17 7l1.4-1.4 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',
     },
     {
