@@ -42,33 +42,33 @@ export class HomePage {
   // Keep these in sync with your Services page
   services: Service[] = [
     {
-      title: 'Check-ups & Cleaning',
-      text: 'Regular exams and professional cleaning to keep your teeth and gums healthy.',
+      title: 'General  Dentistry',
+      text: 'Dental exam, cleanings, flouride treatment and fissure sealants ',
       icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z M9 12l2 2 4-4',
     },
     {
-      title: 'Theatre Care',
-      text: 'Comfortable, professional dental care focused on your oral health, ensuring a healthy smile and a positive experience.',
+      title: 'Restorative Dentistry',
+      text: 'Dental fillings, root canal treatment, crowns, bridges and dentures',
       icon: 'M12 3v2 M12 19v2 M3 12h2 M19 12h2 M5.6 5.6l1.4 1.4 M17 17l1.4 1.4 M5.6 18.4L7 17 M17 7l1.4-1.4 M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z',
     },
     {
-      title: 'Fillings & Restorations',
-      text: 'Durable, natural-looking treatments that repair damaged teeth.',
+      title: 'Cosmetic & Aesthetic Dentistry',
+      text: 'Teeth whitening, composite bonding, veneers, aesthetic restorations.',
       icon: 'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z',
     },
     {
-      title: 'Braces & Alignment',
-      text: 'Straighten your teeth and improve your bite with personalised options.',
+      title: 'Extractions',
+      text: 'Normal and surgical (chair-side & theatre options available)',
       icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M8 14s1.5 2 4 2 4-2 4-2 M9 9h.01 M15 9h.01',
     },
     {
-      title: 'Children’s Dentistry',
-      text: 'A calm, caring environment that helps little ones feel at ease.',
+      title: 'Paediatric Dentistry',
+      text: 'Dental exams, cleaning, flouride treatment, fillings, extractions and space maintainers (chair-side & theatre options available)',
       icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75',
     },
     {
-      title: 'Emergency Care',
-      text: 'Toothache or dental injury? Contact us and we will help as soon as we can.',
+      title: '  Orthodontics',
+      text: 'Braces and clear aligners',
       icon: 'M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z M12 9v4 M12 17h.01',
     },
   ];
@@ -112,7 +112,10 @@ export class HomePage {
   bio: [
     'Dr. Mokgadi Mabeso obtained her Bachelor of Dental Surgery (BDS) from the University of the Witwatersrand (Wits), graduating cum laude.',
     'Her academic journey also includes a Bachelor of Health Sciences Honours in Molecular Medicine and a Bachelor of Science in Biochemistry and Human Physiology, both from Wits.',
-    'Her multidisciplinary academic background provides a strong foundation in biomedical sciences, human physiology and clinical dentistry, complementing her commitment to evidence-based dental practice and comprehensive patient care.',
+    'Her multidisciplinary academic background provides a strong foundation in science, human physiology and clinical dentistry, complementing her commitment to evidence-based dental practice and comprehensive patient care.',
+    'With clinical experience across various aspects of general dentistry, Dr. Mabeso has developed skills in restorative dentistry, including fillings, root canal treatment, extractions, crowns, bridges, dentures and aesthetic dental procedures. She is passionate about helping patients achieve and maintain healthy, confident smiles through individualised treatment planning and quality dental care.',
+    'Dr. Mabeso believes that a positive dental experience begins with making patients feel comfortable, heard and understood. She takes a gentle, patient-centred approach, with a particular passion for working with children. Her warm and friendly nature allows her to connect with younger patients, helping create positive dental experiences and encouraging healthy oral hygiene habits from an early age.',
+    'At Cedar Smiles Dental Clinic, her vision is to create a welcoming, family-friendly environment where patients of all ages feel at ease. She is committed to combining clinical excellence, compassion and attention to detail to make every smile a priority.',
   ],
 };
 

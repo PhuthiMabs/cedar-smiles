@@ -17,7 +17,7 @@ export class RequestBooking {
   // Keep these in sync with your Services page
   services = [
     'Check-up & Cleaning',
-    'Teeth Whitening',
+    'Threatre Care',
     'Fillings & Restorations',
     'Braces & Alignment',
     'Children’s Dentistry',
